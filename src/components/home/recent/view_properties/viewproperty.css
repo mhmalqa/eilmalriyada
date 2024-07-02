@@ -1,0 +1,264 @@
+.viewpropery .container {
+  background-color: rgba(246, 245, 244, 0.792);
+  box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
+}
+.view-img {
+  width: 70%;
+  margin: 10px 30px;
+  position: relative;
+}
+
+.view-img img {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.482);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.div-button {
+  bottom: 0.5rem;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+}
+.div-button button,
+.div-button a {
+  background-color: rgb(240, 248, 255);
+  color: rgb(35, 64, 122);
+  border: 1px solid rgb(35, 64, 122);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 3px;
+  font-family: "Alexandria", sans-serif;
+  font-size: 12px;
+
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.div-button button:hover,
+.div-button a:hover {
+  background-color: rgb(35, 64, 122);
+  color: #fff;
+}
+.div-button i {
+  margin: auto 10px;
+}
+.table-div {
+  padding: 15px 0;
+  font-size: 18px;
+  margin: 10px 20px;
+  width: 80%;
+}
+.table-div p {
+  font-size: 15px;
+  margin: 15px;
+  color: #000000c6;
+}
+.table-div table {
+  text-align: justify;
+  margin: 4px;
+  width: 93%;
+}
+table .th {
+  text-align: start;
+  font-weight: 300;
+}
+table td {
+  font-weight: 500;
+  padding: 8px 10px;
+  text-align: start;
+}
+.desc-more {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 10px;
+  line-height: 35px;
+}
+.viewpropery .containt {
+  position: fixed;
+  top: 5.8rem;
+  height: 8.5rem;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0px 3px 5px 0px rgba(24, 33, 27, 0.299);
+  font-size: 22px;
+  width: 22%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* .viewpropery .containt div {
+  margin-top: 40px;
+} */
+.viewpropery .containt p {
+  margin-bottom: 15px;
+}
+.viewpropery .containt span {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+.viewpropery .containt a {
+  margin: 0 15px;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: 2vh;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.viewpropery .containt .whats {
+  background-color: rgb(106, 183, 29);
+}
+.viewpropery .containt .email {
+  background-color: rgb(232, 46, 13);
+}
+.viewpropery .containt i {
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 1330px) and (min-width: 1088px) {
+  .viewpropery .containt a {
+    padding: 10px 15px;
+    font-size: 12px;
+    margin: auto 2px;
+  }
+  .div-button button,
+  .div-button a {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 1088px) and (min-width: 888px) {
+  .viewpropery .containt {
+    position: sticky;
+    top: 4.5rem;
+    height: 9rem;
+    padding: 10px 0px;
+    background-color: #ffffffdb;
+    width: 90%;
+    box-shadow: 0px 3px 5px 0px rgba(24, 33, 27, 0.299);
+    font-size: 20px;
+    margin: 0 30px;
+  }
+
+  .table-div {
+    width: 95%;
+    font-size: 18px;
+  }
+  .view-img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 888px) and (min-width: 532px) {
+  .viewpropery .containt {
+    position: sticky;
+    top: 4.5rem;
+    padding: 10px 0px;
+    background-color: #ffffffdb;
+    width: 90%;
+    box-shadow: 0px 3px 5px 0px rgba(24, 33, 27, 0.299);
+    font-size: 20px;
+    margin: 0 30px;
+  }
+
+  .table-div {
+    width: 95%;
+    font-size: 15px;
+  }
+  .view-img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 630px) and (min-width: 390px) {
+  .div-button button,
+  .div-button a {
+    padding: 8px;
+    font-size: 8px;
+  }
+  .viewpropery .containt a {
+    margin: 0 15px;
+    font-size: 10px;
+  }
+
+  .viewpropery .containt {
+    position: sticky;
+    top: 4.5rem;
+    padding: 10px 0px;
+    background-color: #ffffffdb;
+    width: 90%;
+    box-shadow: 0px 3px 5px 0px rgba(24, 33, 27, 0.299);
+    font-size: 18px;
+    margin: auto;
+  }
+
+  .table-div {
+    width: 95%;
+    font-size: 15px;
+  }
+  .view-img {
+    margin: auto;
+    width: 95%;
+  }
+  .table-div table {
+    text-align: justify;
+    margin: auto;
+    width: 99%;
+    font-size: 10px;
+  }
+  .div-button i {
+    margin: auto 7px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .div-button button,
+  .div-button a {
+    padding: 6px;
+    font-size: 6.5px;
+  }
+  .viewpropery .containt a {
+    margin: 0 5px;
+    font-size: 8px;
+  }
+
+  .viewpropery .containt {
+    position: sticky;
+    top: 4.5rem;
+    padding: 10px 0px;
+    background-color: #ffffffdb;
+    width: 90%;
+    box-shadow: 0px 3px 5px 0px rgba(24, 33, 27, 0.299);
+    font-size: 18px;
+    margin: auto;
+  }
+
+  .table-div {
+    width: 95%;
+    font-size: 15px;
+  }
+  .view-img {
+    margin: auto;
+    width: 95%;
+  }
+  .table-div table {
+    text-align: justify;
+    margin: auto;
+    width: 99%;
+    font-size: 10px;
+  }
+  .div-button i {
+    margin: auto 4px;
+  }
+}

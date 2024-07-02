@@ -1,0 +1,151 @@
+.recent .text {
+  padding: 30px;
+}
+.recent .category span {
+  padding: 4px 15px;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-block;
+}
+.recent .category i {
+  font-size: 20px;
+  color: #bec7d8;
+}
+.recent p {
+  color: #72809d;
+  margin-top: 5px;
+  font-size: 13px;
+}
+.recent .button {
+  border-top: 1px solid #e4e8f3;
+  padding: 10px 30px;
+}
+.header-rel {
+  display: flex;
+  /* justify-content: space-between; */
+  /* يوزع العناصر بالتساوي على السطر */
+  align-items: center; /* يوسط العناصر عموديا */
+}
+.title-rel {
+  width: 42%;
+}
+.logo-rel {
+  width: 30%;
+}
+
+.logo-rel img {
+  max-width: 230px; /* تحديد أقصى عرض للصور */
+}
+
+.title-rel h1 {
+  text-align: center;
+  font-size: 20px; /* تحديد حجم النص */
+  margin: 0; /* إزالة هامش النص */
+  color: #2d3954;
+}
+
+.infor p {
+  color: #ffffffd4;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 10px;
+}
+.infor p span {
+  font-weight: 700;
+}
+.dv-btn {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.more .btn-more {
+  text-align: center;
+  background-color: #5d4fbb;
+  border-radius: 40px;
+}
+.contactButton {
+  background: #7079f0;
+  color: white;
+  font-family: inherit;
+  padding: 0.45em;
+  padding-left: 1em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3em;
+}
+
+.iconButton {
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.contactButton:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em #5566c2;
+  -webkit-transform: translate(-0.05em, -0.05em);
+  -moz-transform: translate(-0.05em, -0.05em);
+  -ms-transform: translate(-0.05em, -0.05em);
+  -o-transform: translate(-0.05em, -0.05em);
+}
+
+.contactButton:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em #5566c2;
+}
+.tools {
+  position: relative;
+  display: flex;
+  align-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.edit-tool {
+  padding-bottom: 2px;
+}
+.content-option {
+  display: flex;
+  align-items: center;
+  /* align-content: stretch; */
+}
+.img img {
+  aspect-ratio: 7/5;
+}
+
+@media screen and (max-width: 800px) {
+  .logo-rel img {
+    max-width: 150px; /* تحديد أقصى عرض للصور */
+  }
+
+  .title-rel h1 {
+    /* display: none; */
+    font-size: 12px;
+  }
+  .infor {
+    padding: 10px 18px;
+  }
+  .infor p {
+    font-size: 10px;
+    font-weight: 400;
+  }
+}

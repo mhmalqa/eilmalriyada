@@ -1,0 +1,94 @@
+.contact form div {
+  display: flex;
+}
+
+.contact input {
+  font-family: "Alexandria", sans-serif;
+  border-radius: 10px;
+  padding: 15px;
+  align-self: center;
+  width: 50%;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  color: #1c1e67;
+  font-size: 15px;
+  font-weight: 700;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.subj_input input {
+  width: 100%;
+}
+.container-con button {
+  border-radius: 10px;
+  padding: 15px;
+  width: 50%;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  background-color: #f7a400;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.container-con {
+  display: flex;
+  justify-content: space-between;
+  background-color: #122947;
+  color: aliceblue;
+  padding: 50px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.tow-section {
+  width: 48%;
+}
+.info-p {
+  width: 48%;
+  align-self: center;
+  line-height: 45px;
+}
+.info-p p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.727);
+}
+.container-con button:hover {
+  color: #ffffff;
+  background-color: #34be57;
+}
+
+@media screen and (max-width: 912px) {
+  .contact h4 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .container-con {
+    flex-direction: column;
+  }
+  .container-con {
+    width: 100%;
+  }
+  .tow-section {
+    width: 100%;
+  }
+  .info-p {
+    width: 100%;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+  .info-p p {
+    font-size: 12px;
+  }
+  .contact form div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contact form div input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,146 @@
+.card {
+  position: relative;
+  width: 90%;
+  height: 270px;
+  perspective: 700px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  border: 2px solid;
+  border-image: linear-gradient(to top, #ffffff, #9d20b1, #ffffff) 1;
+  background-clip: content-box, border-box;
+  cursor: pointer;
+  margin: 2rem auto;
+  text-align: center;
+  /* text-transform: uppercase; */
+  -webkit-transition: transform 0.6s;
+  -moz-transition: transform 0.6s;
+  -ms-transition: transform 0.6s;
+  -o-transition: transform 0.6s;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Added box-shadow */
+}
+.services h1 {
+  font-size: 10px;
+}
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  text-align: center;
+  transform: rotateY(0deg);
+}
+
+.side h3 {
+  margin: 1rem auto auto auto;
+  color: white;
+}
+.side h2 {
+  margin: 1rem auto auto auto;
+  color: #2aa7a7;
+  font-size: 16px;
+}
+.side p {
+  font-size: 12px;
+  text-align: left;
+  margin-left: 2rem;
+  padding-right: 20px;
+  /* letter-spacing: 0.5px; */
+}
+/*.side h4{
+
+    position: relative;
+    top: -80px;
+}*/
+.back {
+  transform: rotateY(180deg);
+  background-color: #2aa7a7;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  line-height: 19px;
+}
+.back p {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+}
+.front p {
+  color: rgb(65, 65, 65);
+  text-align: center;
+  margin-top: 20px;
+  font-size: 11px;
+  line-height: 20px;
+}
+/* .front button {
+  margin: 4px;
+  padding: 10px;
+} */
+/* Added styles for button container */
+.buttonContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.buttonContainer button:hover {
+  background-color: #20b169;
+}
+.infor span {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 771px) and (max-width: 1497px) {
+  .card {
+    margin: 1rem auto;
+    padding: 25px;
+    /* text-align: center; */
+  }
+  .side p {
+    font-size: 10px;
+    padding-right: 10px;
+    line-height: 18px;
+  }
+  .side h2 {
+    font-size: 15px;
+  }
+  .buttonContainer button {
+    padding: 10px;
+  }
+  .services .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 770px) {
+  .card {
+    margin: 1rem auto;
+    width: 85%;
+  }
+  .side p {
+    font-size: 9px;
+    padding-right: 15px;
+    line-height: 18px;
+    text-align: center;
+  }
+  .buttonContainer button {
+    padding: 10px;
+  }
+}

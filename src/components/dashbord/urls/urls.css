@@ -1,0 +1,68 @@
+.urls {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.707);
+  backdrop-filter: blur(15px);
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+}
+
+/* تحسين تصميم الحقول */
+.urls fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+.urls h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 10px;
+}
+
+.urls label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.urls input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* تحسين تصميم قسم الروابط */
+.social-media-links,
+.service-link {
+  margin-bottom: 30px;
+}
+
+/* تحسين تصميم العناصر الداخلية */
+.social-media-links fieldset,
+.service-link fieldset {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.social-media-links h2,
+.service-link h2 {
+  color: #4caf50; /* لون مختلف للتمييز */
+}
+
+/* تحسين استجابة التصميم للأجهزة المختلفة */
+@media (max-width: 768px) {
+  .urls .container {
+    padding: 15px;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 10px);
+  }
+}

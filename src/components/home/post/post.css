@@ -1,0 +1,88 @@
+.post {
+  padding: 14px 0;
+  background-image: url(../../../../public/images/shape/h3_blog_shape01.png);
+  background-repeat: no-repeat;
+  background-position: right bottom -120px;
+  position: relative;
+}
+.post .img-back {
+  position: absolute;
+  z-index: -3;
+  width: 250px;
+  height: 250px;
+  left: 0px;
+}
+
+.post .content .slide-post {
+  display: flex;
+  margin: 15px 0px;
+  box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 3%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  -webkit-border-radius: 3%;
+  -moz-border-radius: 3%;
+  -ms-border-radius: 3%;
+  -o-border-radius: 3%;
+}
+.slide-post {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* تطبيق تأثير الانتقال على خاصية التحويل */
+}
+
+.slide-post img {
+  transition: transform 0.5s ease-in-out; /* تطبيق تأثير الانتقال على الصور */
+}
+
+.center-image {
+  display: block;
+}
+
+/* تضمين تأثير الانتقال عند تغيير خاصية transform */
+.slide-post img:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+.slide-post img.change {
+  transform: scale(1.1); /* تكبير الصورة عند تغييرها */
+}
+.slide-post {
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+  width:10%;
+}
+
+.slide-post.center-card {
+  opacity: 1;
+  width: 40%;
+}
+
+.center-image.large {
+  width: 100%;
+}
+
+.center-image {
+  width: 100%;
+}
+.slide-post.ca {
+  width: 28%;
+}
+
+@media screen and (max-width: 800px) {
+  .post {
+    background-position: left bottom -520px;
+  }
+  .post .content .slide-post {
+    display: flex;
+    margin: 0 auto;
+    padding: 5px;
+    margin: 5px;
+  }
+  .post .img-back {
+    width: 210px;
+    height: 210px;
+  }
+}

@@ -1,0 +1,108 @@
+.remove-post .post {
+  border: #232a4d85 3px solid;
+  box-shadow: 3px 5px 8px #00000061;
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-border-radius: 20px;
+}
+
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgb(53, 74, 113) 0%, #4481eb 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #276dae;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em rgb(44, 2, 122);
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em rgb(44, 2, 122);
+}
+
+/* remove */
+.remove-post .button {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #cc0000;
+  background-color: #e50000;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.remove-post .button,
+.remove-post .button__icon,
+.remove-post .button__text {
+  transition: all 0.3s;
+}
+
+.remove-post .button .button__text {
+  transform: translateX(-45px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.remove-post .button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: #cc0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transform: translateX(109px);
+  -moz-transform: translateX(109px);
+  -ms-transform: translateX(109px);
+  -o-transform: translateX(109px);
+}
+
+.remove-post .button .svg {
+  width: 20px;
+}
+
+.remove-post .button:hover {
+  background: #cc0000;
+}
+
+.remove-post .button:hover .button__text {
+  color: transparent;
+}
+
+.remove-post .button:hover .button__icon {
+  width: 148px;
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+}
+
+.remove-post .button:active .button__icon {
+  background-color: #b20000;
+}
+
+.remove-post .button:active {
+  border: 1px solid #b20000;
+}
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  z-index: 999;
+}
