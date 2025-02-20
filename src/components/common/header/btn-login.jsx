@@ -18,7 +18,7 @@ export function BtnLogin({ language }) {
   };
   return (
     <>
-      {isLogin == 560174 ? (
+      {isLogin === "560174" ? (
         <button className="btn1 btn-login" onClick={logout}>
           {" "}
           <i className="fa fa-sign-out"></i>{" "}

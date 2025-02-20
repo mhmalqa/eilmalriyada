@@ -1,6 +1,6 @@
 import React from "react";
 import { SocialMedia } from "./header/socialmedia";
-import profilePdf from "./Profile/Company_Profile_Elim_Alriyada.pdf";
+import profilePdf from "./Profile/Profile_Elim_Alriyada.pdf";
 
 const Heading = ({
   title,
@@ -32,9 +32,9 @@ const Heading = ({
           <a
             href={profilePdf}
             className="hero-btn"
-            download="Company_Profile_Elim_Alriyada"
+            download="Profile_Elim_Alriyada"
           >
-            {btn_view}
+            
           </a>
         )}
       </div>

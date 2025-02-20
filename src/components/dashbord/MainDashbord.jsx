@@ -87,7 +87,7 @@ export function MainDashbord() {
     <section className="dashbord">
       <div className="info-account">
         <div className="image-name">
-          <img src={profileImagePreview || Img} alt="profile" />
+          <img src={profileImagePreview || Img} alt="profile" loading="lazy" />
           <p>{name}</p>
         </div>
         <div>

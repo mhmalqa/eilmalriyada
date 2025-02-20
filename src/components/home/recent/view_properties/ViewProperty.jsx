@@ -6,6 +6,8 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
 import "./viewproperty.css";
+// import "%URl_Public%/favicon.png";
+import { Helmet } from "react-helmet-async";
 
 import {
   Counter,
@@ -32,10 +34,47 @@ export function ViewProperty({ element }) {
   if (!item) {
     return <div>Loading...</div>; // يمكنك إضافة رسالة تحميل أو تصميم تحميل هنا
   }
+  // دالة لتحويل النص المحاط بالنجوم (*) إلى نص غامق
+  const convertToBold = (text) => {
+    return text.replace(/\*(.*?)\*/g, "<strong>$1</strong>");
+  };
 
   const dir = document.querySelector("html").getAttribute("dir");
   return (
     <>
+      <Helmet>
+        <meta
+          property="og:url"
+          content={`https://www.eilmalriyada.com/real-estate/view/${item.id}`}
+        />
+        <title>{dir === "rtl" ? item.name : item.name_en}</title>
+
+        <meta
+          property="og:title"
+          content={dir === "rtl" ? item.name : item.name_en}
+        />
+        <meta
+          property="og:description"
+          content={dir === "rtl" ? item.location : item.location_en}
+        />
+        <meta property="og:image" content={item.cover} />
+
+        <meta
+          property="og:type"
+          content={dir === "rtl" ? item.type : item.type_en}
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={dir === "rtl" ? item.name : item.name_en}
+        />
+        <meta
+          name="twitter:description"
+          content={dir === "rtl" ? item.location : item.location_en}
+        />
+        <meta name="twitter:image" content={item.cover} />
+      </Helmet>
       <section className="viewpropery">
         <div className="container">
           <div className="view-img">
@@ -75,14 +114,14 @@ export function ViewProperty({ element }) {
             <span
               style={{
                 background:
-                  item.category_en === "For Sale" ? "#25b5791a" : "#ff98001a",
-                color: item.category_en === "For Sale" ? "#25b579" : "#ff9800",
+                  item.category_en === "For sale" ? "#25b5791a" : "#ff98001a",
+                color: item.category_en === "For sale" ? "#25b579" : "#ff9800",
               }}
             >
               {dir !== "rtl" ? item.category_en : item.category}
             </span>
             <div className="content-option">
-              <a href="tel:+966508605772" className="whats">
+              <a href="https://wa.me/966508605772" className="whats">
                 <i className="fa-brands fa-whatsapp"></i>
                 {dir === "rtl" ? "واتساب" : "WhatsApp"}
               </a>
@@ -94,7 +133,7 @@ export function ViewProperty({ element }) {
           </div>
 
           <div className="table-div ">
-            <h2>{dir === "rtl" ? item.name : item.name_en}</h2>
+            <h1>{dir === "rtl" ? item.name : item.name_en}</h1>
             <p>{dir === "rtl" ? item.location : item.location_en}</p>
             <div>
               <table>
@@ -306,7 +345,15 @@ export function ViewProperty({ element }) {
             <hr />
             <div className="desc-more">
               <h4>{dir !== "rtl" ? "Description" : "الوصف"}</h4>
-              <p>{dir !== "rtl" ? item.description_en : item.description}</p>
+              <pre
+                className="pre-wrap"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    dir !== "rtl"
+                      ? convertToBold(item.description_en)
+                      : convertToBold(item.description),
+                }}
+              ></pre>
             </div>
             <hr />
             <h4>

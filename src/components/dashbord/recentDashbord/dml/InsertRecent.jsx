@@ -100,35 +100,35 @@ export function InsertRecent() {
       setOpen(true);
       setLoading(false); // إخفاء الـ Backdrop
       // تفريغ الحقول في حال تم الإضافة بنجاح
-      setData({
-        cover: null,
-        filePdfRecent: null,
-        name: "",
-        name_en: "",
-        location: "",
-        location_en: "",
-        category: "",
-        category_en: "",
-        price: "",
-        price_en: "",
-        type: "",
-        type_en: "",
-        property_area: "",
-        street_direction: "",
-        street_direction_en: "",
-        bathrooms: "",
-        bedrooms: "",
-        land_length: "",
-        property_age: "",
-        property_age_en: "",
-        street_width: "",
-        land_width: "",
-        description: "",
-        description_en: "",
-        license_number: "",
-        map_location: "",
-        images: [],
-      });
+      // setData({
+      //   cover: null,
+      //   filePdfRecent: null,
+      //   name: "",
+      //   name_en: "",
+      //   location: "",
+      //   location_en: "",
+      //   category: "",
+      //   category_en: "",
+      //   price: "",
+      //   price_en: "",
+      //   type: "",
+      //   type_en: "",
+      //   property_area: "",
+      //   street_direction: "",
+      //   street_direction_en: "",
+      //   bathrooms: "",
+      //   bedrooms: "",
+      //   land_length: "",
+      //   property_age: "",
+      //   property_age_en: "",
+      //   street_width: "",
+      //   land_width: "",
+      //   description: "",
+      //   description_en: "",
+      //   license_number: "",
+      //   map_location: "",
+      //   images: [],
+      // });
     } catch (error) {
       console.error("حدث خطأ أثناء إرسال البيانات:", error);
       setMessage("حدث خطأ أثناء إرسال البيانات");
@@ -234,6 +234,7 @@ export function InsertRecent() {
                     name={name}
                     value={data[name]}
                     onChange={handleChange}
+                    required
                   />
                 ) : (
                   <input
@@ -242,6 +243,7 @@ export function InsertRecent() {
                     name={name}
                     value={data[name]}
                     onChange={handleChange}
+                    required
                   />
                 )}
               </div>

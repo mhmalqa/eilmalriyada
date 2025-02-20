@@ -2,11 +2,15 @@ import React from "react";
 import { footer } from "../../data/Data";
 import "./footer.css";
 import { SocialMedia } from "../header/socialmedia";
+import { Link } from "react-router-dom";
 
 const Footer = ({ language }) => {
   const filteredFooter = footer.filter((item) => item.language === language);
   const getTextDirection = () => {
     return language === "arabic" ? "rtl" : "ltr";
+  };
+  const scrollToTop = () => {
+    window.scrollTo(0, 0); // التمرير إلى أعلى الصفحة
   };
 
   return (
@@ -32,12 +36,12 @@ const Footer = ({ language }) => {
               </p>
 
               <SocialMedia />
-              <p>
+              {/* <p>
                 {language === "arabic"
                   ? " مكتب رقم ٢٦ علم الريادة للاستشارات المالية والادارية بدر محمد الصيوان للتسويق العقاري"
                   : "Office Number 26, Entrepreneurship Science for Financial and Administrative Consultations, Badr Mohammed Al-Saywan for Real Estate Marketing."}
-              </p>
-              <a
+              </p> */}
+              {/* <a
                 href="https://maps.app.goo.gl/J7P88p2R15KF7RdN9"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -47,19 +51,40 @@ const Footer = ({ language }) => {
 
                   <i className="fa fa-location-dot"></i>
                 </button>
-              </a>
+              </a> */}
             </div>
           </div>
           {filteredFooter.map((val) => (
             <div className="box" style={{ direction: getTextDirection() }}>
               <h3>{val.title}</h3>
               <ul>
-                {val.text.map((items) => (
-                  <li>
-                    {items.icons}
-                    {items.list}
-                  </li>
-                ))}
+                {val.text.map((items) =>
+                  items.url.startsWith("http") ? (
+                    <a
+                      href={items.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => scrollToTop()}
+                    >
+                      <li>
+                        {items.icons}
+                        {items.list}
+                      </li>
+                    </a>
+                  ) : (
+                    <Link
+                      to={items.url}
+                      onClick={() => {
+                        scrollToTop();
+                      }}
+                    >
+                      <li>
+                        {items.icons}
+                        {items.list}
+                      </li>
+                    </Link>
+                  )
+                )}
               </ul>
             </div>
           ))}
@@ -71,12 +96,12 @@ const Footer = ({ language }) => {
             ? "© جميع الحقوق محفوظة لـ"
             : "© All Rights Reserved to "}
           <a
-            href="https://www.instagram.com/mhmalqa/"
+            href="https://x.com/baderalsiwan?s=11"
             target="_blank"
             style={{ color: "white" }}
             rel="noreferrer"
           >
-            mhmalqa
+            Bader
           </a>{" "}
           - 2024
         </span>

@@ -19,7 +19,7 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Added box-shadow */
 }
 .services h1 {
-  font-size: 10px;
+  font-size: 15px;
 }
 .card.flipped {
   transform: rotateY(180deg);

@@ -28,7 +28,7 @@ export function Login({ language, setIsLoggedIn }) {
       localStorage.setItem("isLogin", 560174);
       window.location.href = "/maindashbord/messages";
     } catch (error) {
-      console.error("Error logging in:", error);
+      // console.error("Error logging in:", error);
       toast.error("خطأ بالبيانات");
 
     }

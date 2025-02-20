@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 
-
 const PriceCard = (props) => {
   const [startPostIndex, setStartPostIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setStartPostIndex(
-        (startIndex) => (startIndex + 1) % props.posts.length
-      );
-    }, 3000); // تحديث الفهرس البداية كل 3 ثوانٍ
+      setStartPostIndex((startIndex) => (startIndex + 1) % props.posts.length);
+    }, 4000); // تحديث الفهرس البداية كل 4 ثوانٍ
 
     return () => clearInterval(interval);
   }, []);
@@ -34,6 +31,10 @@ const PriceCard = (props) => {
                 props.posts[(startPostIndex + index) % props.posts.length]
                   .srcSet
               }
+              title={
+                props.posts[(startPostIndex + index) % props.posts.length].alt
+              }
+              loading="lazy"
             />
           </div>
         ))}

@@ -32,7 +32,7 @@ export function SocialMedia() {
 
   const socialMediaIcons = [
     { name: "whatsapp", index: 0, iconClass: "fa-whatsapp" },
-    { name: "instagram", index: 1, iconClass: "fa-instagram" },
+    { name: "fa-linkedin-in", index: 1, iconClass: "fa-linkedin-in" },
     { name: "twitter", index: 2, iconClass: "fa-x-twitter" },
     { name: "tiktok", index: 3, iconClass: "fa-tiktok" },
   ];

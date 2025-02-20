@@ -6,19 +6,22 @@ import {
   useLocation,
   useHistory,
 } from "react-router-dom";
+// import ReactGA from "react-ga";
 import Home from "../home/Home";
 import Header from "../common/header/Header";
 import Footer from "../common/footer/Footer";
 import About from "../about/About";
-import Pricing from "../pricing/Pricing";
-import Blog from "../blog/Blog";
 import Services from "../services/Services";
 import Contact from "../contact/Contact";
 import { ViewProperty } from "../home/recent/view_properties/ViewProperty";
 import { Login } from "../auth/login/Login";
 import { RecentBage } from "../recentbage/RecentBage";
 import { MainDashbord } from "../dashbord/MainDashbord";
+import WebDesignService from "../home/web/WebDesignService";
+import ResponsiveVideo from "../home/video/ResponsiveVideo";
+import RealEstatePhotography from "../home/real-estate-photography/RealEstatePhotography";
 
+// const TRACKING_ID = "G-J3X9Y258WF";
 const Pages = () => {
   const defaultLanguage = localStorage.getItem("language") || "arabic";
   const [language, setLanguage] = useState(defaultLanguage);
@@ -83,9 +86,14 @@ const PageContent = ({ language, setLanguage }) => {
           render={() => <RecentBage language={language} />}
         />
         <Route path="/real-estate/view/:id" component={ViewProperty} />
+        {/* <Route path="/design" component={WebDesignService} /> */}
+
         <Route path="/contact" component={Contact} />
-        <Route path="/blog" component={Blog} />
-        <Route path="/pricing" component={Pricing} />
+        <Route path="/video" component={ResponsiveVideo} />
+        <Route
+          path="/RealEstatePhotography"
+          component={RealEstatePhotography}
+        />
 
         {!isLoggedIn && (
           <Route

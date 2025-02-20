@@ -15,13 +15,13 @@ const Contact = ({ inHome, language }) => {
   const isArabic = language === "arabic";
 
   const [allFieldsFilled, setAllFieldsFilled] = useState(false);
-
   const [data, setData] = useState({
     name: "",
     subject: "",
     email: "",
     phone_number: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false); // New state for button
 
   const handelInputChange = (event) => {
     const { name, value } = event.target;
@@ -37,6 +37,7 @@ const Contact = ({ inHome, language }) => {
   }, [data]);
 
   const sendMessage = async () => {
+    setIsSubmitting(true); // Disable button
     try {
       const fdata = new FormData();
       fdata.append("name", data.name);
@@ -60,6 +61,8 @@ const Contact = ({ inHome, language }) => {
     } catch (error) {
       console.error("حدث خطأ أثناء إرسال البيانات:", error);
       toast.error("حدث خطأ أثناء إرسال البيانات");
+    } finally {
+      setIsSubmitting(false); // Re-enable button
     }
   };
 
@@ -143,8 +146,14 @@ const Contact = ({ inHome, language }) => {
                     value={data.phone_number}
                     required
                   />
-                  <button type="submit">
-                    {isArabic ? "إرسال الطلب" : "Submit Request"}
+                  <button type="submit" disabled={isSubmitting}>
+                    {isSubmitting
+                      ? isArabic
+                        ? "جاري الإرسال..."
+                        : "Sending..."
+                      : isArabic
+                      ? "إرسال الطلب"
+                      : "Submit Request"}
                   </button>
                 </div>
               </form>

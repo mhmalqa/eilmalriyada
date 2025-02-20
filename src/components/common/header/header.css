@@ -10,9 +10,9 @@ header {
   z-index: 100;
 }
 header img {
-  width: 330px;
-  padding: 10px;
-  margin: 0 -120px;
+  width: 310px;
+  padding: 0 10px;
+  margin: 0 -90px;
 }
 .icons {
   text-align: center;
@@ -75,49 +75,50 @@ header h4 {
 header .toggle {
   display: none;
 }
-.language-menu {
-  border-radius: 15px;
-  padding: 8px 2px;
-  background: #36a036;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-weight: bold;
-  margin: 0px -25px 0px -25px;
-  font-size: 13px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-}
-.language-menu option {
-  font-size: 13px;
-}
 .btn-login {
+  all: unset;
+  cursor: pointer;
+  padding: 10px 15px;
   background-color: #1d5b95;
   font-family: "Alexandria", sans-serif;
-
   border-radius: 15px;
   color: #fff;
-  margin: 0 30px 0;
   font-size: 13px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
+
 .dashbor-div {
   display: flex;
 }
 .icon-dashbord {
   font-size: x-large;
-  margin: 0 35px;
   color: #092744;
+}
+.btnLanguage {
+  all: unset;
+  cursor: pointer;
+  padding: 7px 10px;
+  border-radius: 10px;
+  background-color: #379e37;
+  margin: 2px;
+  color: #fff;
+  font-weight: 500;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.btnLanguage:hover {
+  color: #092744;
+  background-color: rgb(210, 210, 210);
 }
 @media screen and (max-width: 1126px) and (min-width: 985px) {
   header img {
-    margin: auto -50px;
-    width: 280px;
+    margin: auto -40px;
+    width: 230px;
   }
 
   header a {
@@ -132,8 +133,10 @@ header .toggle {
     padding-top: 10px;
   }
   header img {
-    width: 220px;
+    width: 200px;
+    padding: 0 0 2px 0;
     margin: 0 0;
+    margin-top: -3px;
   }
   header .button {
     display: none;
@@ -168,8 +171,6 @@ header .toggle {
 
 @media screen and (max-width: 800px) {
   header img {
-    margin-bottom: -8px;
-    margin-left: -20px;
   }
   header .button {
     display: none;

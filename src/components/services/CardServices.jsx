@@ -1,12 +1,10 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./CardServices.module.css";
 import { Col } from "react-bootstrap";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const CardServices = (props) => {
   const [isFlipped, setIsFlipped] = useState(false);
-
-  
-
 
   const handleFlip = (e) => {
     // Check if the click is on a button
@@ -30,11 +28,12 @@ const CardServices = (props) => {
         <h2>{props.name}</h2>
         <p className="desc">{props.desc_f}</p>
         <div className={styles.buttonContainer}>
-          <a href={props.url}>
+          {/* <a href={props.url}> */}
+          <Link to="/contact">
             <button className="btn-serv">
               {props.language === "arabic" ? "اطلب الان" : "Order Now"}
             </button>
-          </a>
+          </Link>
         </div>
       </div>
       <div className={`${styles.side} ${styles.back}`}>

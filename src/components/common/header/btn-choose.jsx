@@ -7,31 +7,26 @@ export function BtnChoose({ setLanguage }) {
     localStorage.getItem("language") || "arabic"
   );
 
-  const handleLanguageToggle = (selectedLanguage) => {
-    localStorage.setItem("language", selectedLanguage);
-    setSelectedLanguage(selectedLanguage);
-    toggleLanguage(selectedLanguage, setLanguage);
+  const handleLanguageToggle = () => {
+    const newLanguage = selectedLanguage === "arabic" ? "english" : "arabic";
+    setSelectedLanguage(newLanguage);
+    localStorage.setItem("language", newLanguage);
+    toggleLanguage(newLanguage, setLanguage);
   };
+
   const isLogin = localStorage.getItem("isLogin");
 
   return (
     <>
-      <select
-        className="language-menu"
-        value={selectedLanguage}
-        onChange={(e) => handleLanguageToggle(e.target.value)}
-      >
-        <option value="arabic">عربي</option>
-        <option value="english">English</option>
-      </select>
-      {isLogin == 560174 ? (
+      <button className="btnLanguage" onClick={handleLanguageToggle}>
+        {selectedLanguage === "arabic" ? "En" : "Ar"}
+      </button>
+
+      {isLogin === "560174" ? (
         <Link to="/maindashbord/messages">
-          {" "}
-          <i class="fa-solid fa-gauge icon-dashbord"></i>
+          <i className="fa-solid fa-gauge icon-dashbord"></i>
         </Link>
-      ) : (
-        ""
-      )}
+      ) : null}
     </>
   );
 }

@@ -52,10 +52,17 @@
   margin: 10px 20px;
   width: 80%;
 }
-.table-div p {
+.table-div p,
+pre {
   font-size: 15px;
   margin: 15px;
   color: #000000c6;
+}
+.pre-wrap {
+  font-family: "Alexandria", sans-serif;
+  white-space: pre-wrap; /* الحفاظ على الفواصل والأسطر الجديدة */
+  word-wrap: break-word; /* تفعيل التفاف النص عند الضرورة */
+  overflow-wrap: break-word; /* إضافة دعم لخاصية word-wrap في متصفحات مختلفة */
 }
 .table-div table {
   text-align: justify;

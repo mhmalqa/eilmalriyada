@@ -7,18 +7,8 @@ import { BtnLogin } from "./btn-login";
 
 const Header = ({ language, setLanguage }) => {
   const [navList, setNavList] = useState(false);
-  const [loading, setLoading] = useState(false); // حالة التحميل
+  const [loading, setLoading] = useState(true); // حالة التحميل
   const location = useLocation(); // استخدام useLocation من react-router-dom
-
-  useEffect(() => {
-    // تشغيل حالة التحميل عند تحميل الصفحة الأولى
-    handleLoading();
-  }, []);
-
-  useEffect(() => {
-    // تشغيل حالة التحميل عند تغيير المسار (الروابط)
-    handleLoading();
-  }, [location.pathname]); // استخدام location.pathname لتحديد المسار الحالي
 
   const scrollToTop = () => {
     window.scrollTo(0, 0); // التمرير إلى أعلى الصفحة
@@ -27,11 +17,15 @@ const Header = ({ language, setLanguage }) => {
   // دالة لتشغيل حالة التحميل
   const handleLoading = () => {
     setLoading(true);
-    // يمكنك استخدام setTimeout لتحديد مدة زمنية لعرض علامة التحميل
     setTimeout(() => {
       setLoading(false);
-    }, 1000); // هنا 1000 تمثل 1 ثانية
+    }, 1000);
   };
+
+  useEffect(() => {
+    handleLoading(); // تشغيل حالة التحميل عند تغيير المسار
+    scrollToTop(); // التمرير إلى أعلى الصفحة عند تغيير المسار
+  }, [location.pathname]); // عند تغيير المسار فقط
 
   return (
     <header>
@@ -68,16 +62,9 @@ const Header = ({ language, setLanguage }) => {
             )}
           </ul>
         </div>
-        <div className="button flex">
+        <div className="button flex btns">
           <BtnLogin language={language} />
           <BtnChoose language={language} setLanguage={setLanguage} />
-
-          {/* <img
-          className="icon-dashbord"
-          src={`${homepage}/images/5432747.png`}
-          alt="dashbord"
-          srcset=""
-        /> */}
         </div>
 
         <div className="toggle">
@@ -94,7 +81,7 @@ const Header = ({ language, setLanguage }) => {
       {/* عرض علامة التحميل إذا كانت حالة التحميل true */}
       {loading && (
         <div className="loader">
-          <img src="/favicon.png" alt="" srcset="" />
+          <img src="/favicon.ico" alt="" srcset="" />
           <img className="circle" src="/lode.png" alt="" srcset="" />
         </div>
       )}

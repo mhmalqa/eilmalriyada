@@ -3,6 +3,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import "./cardcontant.css";
 import instance from "../../data/BaseUrl";
+import Alert from "@mui/material/Alert";
 
 export function CardContact() {
   function formatDate(dateString) {
@@ -51,12 +52,12 @@ export function CardContact() {
   return (
     <section className="dash padding">
       {loading ? ( // عرض أيقونة التحميل إذا كانت البيانات قيد التحميل
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Box display="flex" justifyContent="center" alignItems="center">
           <CircularProgress />
+        </Box>
+      ) : data.length === 0 ? ( // إذا كانت البيانات فارغة
+        <Box display="flex" justifyContent="center" alignItems="center">
+          <Alert severity="info">لا توجد رسائل حاليًا.</Alert>
         </Box>
       ) : (
         <div className="container grid3">

@@ -18,6 +18,12 @@ export const nav = [
     path: "/real-estate",
   },
   {
+    text_ar: "تصوير عقاري",
+    text_en: "Photography",
+    path: "/RealEstatePhotography",
+  },
+
+  {
     text_ar: "من نحن",
     text_en: "About Us",
     path: "/about",
@@ -112,34 +118,6 @@ export const sectors = [
 
 export const services = [
   {
-    id: 1,
-    cover: "./images/hero/h4.png",
-    name: "دراسة الجدوى الاقتصادية",
-    name_en: "Economic Feasibility Study",
-    desc_b:
-      "من خلال هذه الخدمة، نقوم بتقييم المشاريع المقترحة بدقة، وتحليل البيانات المالية والاقتصادية للتأكد من جدوى المشروع. نضع بين أيديكم تحليلات معمقة تساعدكم على فهم كافة الأبعاد المالية والسوقية المتعلقة بالمشروع. كما نوفر لكم خططًا مستقبلية مدروسة تساعد على تحقيق النجاح والاستدامة في سوق الأعمال السعودي.",
-    desc_b_en:
-      "Through this service, we accurately evaluate proposed projects, analyze financial and economic data to ensure the project's feasibility. We provide in-depth analysis to help you understand all financial and market-related dimensions of the project. Additionally, we offer meticulously crafted future plans to assist in achieving success and sustainability in the Saudi business market.",
-    desc_f:
-      "في عالم الأعمال المتسارع، يأتي قرار الاستثمار مع تحديات ومخاطر عديدة. لذا، نقدم لكم خدمة دراسة الجدوى الاقتصادية التي تعد بمثابة بوصلتكم لاتخاذ القرارات الاستثمارية الصائبة.",
-    desc_f_en:
-      "In the fast-paced business world, investment decisions come with numerous challenges and risks. Therefore, we offer you an economic feasibility study service that serves as your compass for making sound investment decisions.",
-  },
-  {
-    id: 2,
-    cover: "./images/hero/h2.png",
-    name: "استشارات اقتصادية و مالية و ادارية",
-    name_en: "Industrial Sector",
-    desc_b:
-      "نقدم استشارات متخصصة في المجالات الاقتصادية، المالية، والإدارية، مع التركيز على تقديم نصائح عملية وإرشادات مهنية تساعد في صنع القرارات الاستراتيجية وتحقيق النمو المستدام. سواء كنتم تسعون لتطوير استراتيجيات جديدة أو تحتاجون إلى تحليل شامل للأوضاع المالية، فإن خبرائنا مستعدون لمساعدتكم في تجاوز التحديات واستغلال الفرص المتاحة في السوق السعودي.",
-    desc_b_en:
-      "We offer specialized consultancy services in economic, financial, and administrative fields, focusing on providing practical advice and professional guidance to aid in strategic decision-making and achieving sustainable growth. Whether you are seeking to develop new strategies or require comprehensive financial situation analysis, our experts are ready to assist you in overcoming challenges and capitalizing on opportunities available in the Saudi market.",
-    desc_f:
-      "في ظل التحديات المتزايدة التي تواجهها الشركات في السوق السعودي، تأتي خدماتنا الاستشارية لتقدم لكم الدعم اللازم لتعزيز كفاءة عملياتكم وتحسين أدائكم المالي والإداري.",
-    desc_f_en:
-      "Amidst the growing challenges facing companies in the Saudi market, our consultancy services come to provide you with the necessary support to enhance the efficiency of your operations and improve your financial and administrative performance.",
-  },
-  {
     id: 3,
     cover: "./images/hero/h3.png",
     name: "حلول مالية متطورة ",
@@ -153,20 +131,7 @@ export const services = [
     desc_f_en:
       "Innovative and effective financial, administrative, and marketing solutions to achieve the goals of companies and individuals with the help of our skilled consultants .",
   },
-  {
-    id: 4,
-    cover: "./images/hero/h1.png",
-    name: "خدمة إعادة الهيكلة الإدارية للشركات",
-    name_en: "Entertainment Sector",
-    desc_b:
-      "نقوم بتقييم شامل للأنظمة الإدارية القائمة وتصميم هياكل تنظيمية جديدة تتناسب مع تحديات وفرص السوق المحلي. خدماتنا تشمل تطوير الإستراتيجيات، تحسين العمليات، وتدريب الفرق الإدارية لضمان تنفيذ فعّال ومستدام. استفيدوا من خبرتنا لإعادة هيكلة شركتكم بما يعزز من مرونتها وقدرتها التنافسية في السوق.",
-    desc_b_en:
-      "We conduct a comprehensive evaluation of existing management systems and design new organizational structures tailored to the challenges and opportunities of the local market. Our services include strategy development, process improvement, and management team training to ensure effective and sustainable implementation. Benefit from our expertise in restructuring your company to enhance its resilience and competitiveness in the market.",
-    desc_f:
-      "في بيئة الأعمال المتغيرة بالمملكة العربية السعودية، تبرز الحاجة الماسة للشركات لتعزيز فعاليتها وتحسين أدائها من خلال هياكل تنظيمية محسّنة.  نقدم خدمة إعادة الهيكلة الإدارية، التي تهدف إلى توفير حلول مخصصة وفعالة لتحسين كفاءة الشركات وتحقيق أهدافها بطرق أكثر فاعلية.",
-    desc_f_en:
-      "In the dynamic business environment of Saudi Arabia, there is a pressing need for companies to enhance their effectiveness and improve their performance through optimized organizational structures. We provide administrative restructuring services aimed at offering customized and efficient solutions to enhance companies' efficiency and achieve their goals more effectively.",
-  },
+
   {
     id: 5,
     cover: "./images/hero/h6.png",
@@ -181,56 +146,22 @@ export const services = [
     desc_f_en:
       "In the digital age, we offer a comprehensive range of traditional and digital marketing services, specifically designed to meet the needs of the Saudi market. We help you build effective marketing strategies that precisely target your local audience, enhance your brand identity, and achieve your strategic objectives.",
   },
+  {
+    id: 6,
+    cover: "./images/hero/h7.png",
+    name: "خدمات العقارات",
+    name_en: "Real Estate Services",
+    desc_b:
+      "نقدم مجموعة من الخدمات المهنية لضمان تحقيق أهدافكم العقارية بسهولة ويسر. نتميز بالعمل تحت تفويض رسمي من البائعين والمشترين عبر منصة الهيئة العامة للعقار، مما يضمن احترافية دائمة في تعاملاتنا.",
+    desc_b_en:
+      "We offer a range of professional services to ensure you achieve your real estate goals with ease. We work under official mandates from sellers and buyers through the General Authority for Real Estate platform, ensuring professionalism in all transactions.",
+    desc_f:
+      "تشمل خدماتنا: البحث عن فرص عقارية حقيقية، تسويق العقار باستخدام استراتيجيات مبتكرة، تنظيم معاينات مرنة بواسطة فريق متخصص، المساعدة في العروض والمفاوضات، والتسويق الشامل عبر شبكة واسعة من المسوقين المعتمدين لضمان نجاح عمليات البيع.",
+    desc_f_en:
+      "Our services include: searching for genuine real estate opportunities, marketing properties using innovative strategies, organizing flexible viewings by our specialized team, assisting in offers and negotiations, and comprehensive marketing through a wide network of certified marketers to ensure successful sales.",
+  },
 ];
-// const baseUrl = "http://127.0.0.1:8000/api";
-// const baseUrlWithoutApi = "http://127.0.0.1:8000";
-
-// export const list = [
-//   {
-//     id: 1,
-//     cover: process.env.PUBLIC_URL + "/images/list/p-1.png",
-//     name: "شقة في عمارة - الرياض حي طويق",
-//     name_en: "Apartment in Building - Riyadh, Tuwaiq District",
-//     location: "طويق الرياض, الرياض",
-//     location_en: "Tuwaiq, Riyadh, Riyadh",
-//     category: "مباع",
-//     category_en: "Sold",
-//     price: "9,750 ريال",
-//     price_en: "9,750 SAR",
-//     type: "شقة",
-//     type_en: "Apartment",
-//     property_area: "10m",
-//     street_direction: "شمال",
-//     street_direction_en: "",
-//     bathrooms: "1m",
-//     bedrooms: "10m",
-//     land_length: "80s",
-//     property_age: "70s",
-//     property_age_en: "Apartment",
-//     street_width: "100m",
-//     land_width: "شقة",
-//     description: "الوصف",
-//     description_en: "Description",
-//     license_number: "110005789",
-//     map_location: "رابط موقع العقار على الخريطة",
-//     imgs: [
-//       // قم بإضافة روابط الصور هنا
-//       // على سبيل المثال:
-//       // { url: "/images/property1.jpg" },
-//       // { url: "/images/property2.jpg" },
-//       {
-//         src: "https://media.istockphoto.com/id/1469952025/photo/a-business-person-is-working-in-a-cafe-at-night-using-a-tablet-device-and-a-stylus-to-look-up.webp?b=1&s=170667a&w=0&k=20&c=QSMWCuH5Wde2WQM8JJHz6QP2t5DNljUpxZ2J84M37Jg=",
-//       },
-//       {
-//         src: "https://media.istockphoto.com/id/924994456/tr/foto%C4%9Fraf/sokakta-cep-telefonu-kullanan-kad%C4%B1n.jpg?s=2048x2048&w=is&k=20&c=HHc1tTeBHIkH1s4VQAcmplFcCkNdm2_ixLdTxMamdf0=",
-//       },
-//       {
-//         src: "https://media.istockphoto.com/id/1469952025/photo/a-business-person-is-working-in-a-cafe-at-night-using-a-tablet-device-and-a-stylus-to-look-up.webp?b=1&s=170667a&w=0&k=20&c=QSMWCuH5Wde2WQM8JJHz6QP2t5DNljUpxZ2J84M37Jg=",
-//       },
-//     ],
-//   },
-// ];
-const fetchRecentFromAPI = async () => {
+export const fetchRecentFromAPI = async () => {
   try {
     const response = await instance.get("/showrecent");
     const recentsData = response.data;
@@ -269,7 +200,18 @@ const fetchRecentFromAPI = async () => {
       })),
     }));
 
-    return processedData;
+    // ترتيب العناصر حسب النوع
+    const sortedData = processedData.sort((a, b) => {
+      const order = ["castle", "villa", "apartment"];
+      const aIndex = order.indexOf(a.type_en.toLowerCase());
+      const bIndex = order.indexOf(b.type_en.toLowerCase());
+
+      if (aIndex === -1) return 1; // إذا كان النوع غير موجود في الترتيب، يذهب إلى النهاية
+      if (bIndex === -1) return -1;
+      return aIndex - bIndex;
+    });
+
+    return sortedData;
   } catch (error) {
     console.error("Error fetching posts:", error);
     return [];
@@ -349,11 +291,13 @@ const fetchPostsFromAPI = async () => {
 
     // Process the data to match the `posts` object structure
     const processedData = {
-      post_rel: postsData.map((post) => ({
-        img: `${baseUrlWithoutApi}${post.image_path}`,
-        alt: post.type,
-        srcSet: "",
-      })),
+      post_rel: postsData
+        .map((post) => ({
+          img: `${baseUrlWithoutApi}${post.image_path}`,
+          alt: post.type,
+          srcSet: "",
+        }))
+        .reverse(),
       post_adm: [], // Add logic for post_adm if needed
     };
 
@@ -374,48 +318,40 @@ export const footer = [
     language: "arabic",
     title: "اهم الصفحات",
     text: [
-      { list: "الرئيسية", url: "" },
-      { list: "خدماتنا", url: "" },
-      { list: "القطاعات", url: "" },
-      { list: "من نحن", url: "" },
-      { list: "تواصل معنا", url: "" },
-      { list: "العقارات", url: "" },
+      { list: "الرئيسية", url: "/" },
+      { list: "خدماتنا", url: "/services" },
+      { list: "العقارات", url: "/real-estate" },
+      { list: "من نحن", url: "/about" },
+      { list: "تواصل معنا", url: "/contact" },
     ],
   },
   {
     language: "english",
     title: "Main Pages",
     text: [
-      { list: "Home", url: "" },
-      { list: "Services", url: "" },
-      { list: "Sectors", url: "" },
-      { list: "About Us", url: "" },
-      { list: "Contact Us", url: "" },
-      { list: "Real Estate", url: "" },
+      { list: "Home", url: "/" },
+      { list: "Services", url: "/services" },
+      { list: "Real Estate", url: "/real-estate" },
+      { list: "About Us", url: "/about" },
+      { list: "Contact Us", url: "/contact" },
     ],
   },
   {
     language: "arabic",
     title: "خدماتنا",
     text: [
-      { list: " دراسة الجدوى", url: "" },
-      { list: "استشارات اقتصادية", url: "" },
-      { list: "إعادة الهيكلة للشركات", url: "" },
-      { list: "التطوير وتنمية الإستثمارات", url: "" },
-      { list: "حلول تمويلية", url: "" },
-      { list: "إدارة المشاريع والإستثمارات", url: "" },
+      { list: "حلول مالية متطورة", url: "/services" },
+      { list: "خدمات العقارات", url: "/services" },
+      { list: "خدمات التسويق", url: "/services" },
     ],
   },
   {
     language: "english",
     title: "Our Services",
     text: [
-      { list: "Feasibility Study", url: "" },
-      { list: "Economic Consulting", url: "" },
-      { list: "Corporate Restructuring", url: "" },
-      { list: "Development and Investment", url: "" },
-      { list: "Financial Solutions", url: "" },
-      { list: "Project and Investment Management", url: "" },
+      { list: "Advanced Financial Solutions", url: "/services" },
+      { list: "Real Estate Services", url: "/services" },
+      { list: "Marketing Services", url: "/services" },
     ],
   },
   {
@@ -425,10 +361,12 @@ export const footer = [
       {
         list: "+966 50 860 5772",
         icons: <i className="fa-solid fa-phone" style={{ margin: "5px" }}></i>,
+        url: "https://wa.me/966508605772",
       },
       {
         list: "Saudi Arabia - Riyadh",
         icons: <i className="fa fa-location-dot" style={{ margin: "5px" }}></i>,
+        url: "https://maps.app.goo.gl/Qq4H9s8dzw1z8RMXA",
       },
     ],
   },
@@ -439,10 +377,12 @@ export const footer = [
       {
         list: "5772 860 50 966+",
         icons: <i className="fa-solid fa-phone" style={{ margin: "5px" }}></i>,
+        url: "https://wa.me/966508605772",
       },
       {
-        list: "المملكة العربية السعودية- الرياض",
-        icons: <i className="fa fa-location-dot" style={{ margin: "5px" }}></i>,
+        list: "الرياض،حي الحمراء، مقابل العثيم",
+        icons: <i className="fa fa-location-dot" style={{ margin: "4px" }}></i>,
+        url: "https://maps.app.goo.gl/VeArqA13AHou9eSS9",
       },
     ],
   },
