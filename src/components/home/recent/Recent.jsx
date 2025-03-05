@@ -2,8 +2,6 @@ import React from "react";
 import Heading from "../../common/Heading";
 import "./recent.css";
 import RecentCard from "./RecentCard";
-import Post from "../post/Post";
-import { HeaderRel } from "./Header-rel";
 import { list } from "../../data/Data";
 import { Link } from "react-router-dom";
 
@@ -26,7 +24,6 @@ const Recent = ({ language, isHome, isDash }) => {
           <RecentCard language={language} isHome={isHome} isdash={isDash} />
           <div className="dv-btn">
             <Link to="/real-estate" className="more">
-             
               <button
                 class="contactButton"
                 onClick={scrollToTop}

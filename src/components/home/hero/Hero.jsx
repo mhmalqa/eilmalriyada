@@ -215,7 +215,11 @@ const HomePage = () => {
               },
             }}
           >
-            <a href="https://wa.me/966508605772" target="_blank">
+            <a
+              href="https://wa.me/966508604391"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Button
                 variant="contained"
                 color="success"

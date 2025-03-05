@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // استيراد عنصر Link من مكتبة react-router-dom
+import { Link } from "react-router-dom";
 import instance from "../../data/BaseUrl";
 
 export function BtnLogin({ language }) {
@@ -25,9 +25,7 @@ export function BtnLogin({ language }) {
           {language === "arabic" ? " خروج" : "Login"}
         </button>
       ) : (
-        <Link to="/login" className="btn1 btn-login">
-          {" "}
-          {/* توجيه المستخدم إلى صفحة تسجيل الدخول عند النقر */}
+        <Link to="/login" className="btn1 btn-login">     
           <i className="fa fa-sign-out"></i>{" "}
           {language === "arabic" ? " الدخول" : "Login"}
         </Link>

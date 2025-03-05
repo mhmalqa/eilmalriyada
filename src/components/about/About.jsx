@@ -29,26 +29,46 @@ const About = (props) => {
             <h2>{isArabic ? "من نحن؟" : "Who We Are?"}</h2>
             <p>
               {isArabic
-                ? "بدر محمد الصيوان للتسويق والوساطة العقارية. بدر حاصل على درجة البكالوريوس مع مرتبة الشرف في المحاسبة والمالية من Dundalk Institute of Technology في أيرلندا @DkIT_ie، بالإضافة إلى دبلوم في إدارة الأعمال من جامعة Royal Roads @RoyalRoads في كندا. كما أنه مسوق عقاري معتمد من هيئة العقار برقم ترخيص 1100012564."
-                : "Bader Mohammed Al-Siwan for Real Estate Marketing and Brokerage. Bader holds a Bachelor's degree with Honors in Accounting and Finance from Dundalk Institute of Technology in Ireland @DkIT_ie, in addition to a Diploma in Business Administration from Royal Roads University @RoyalRoads in Canada. He is also a certified real estate marketer from the Real Estate Authority with license number 1100012564."}
+                ? "في بدر محمد الصيوان للتسويق والوساطة العقارية، نعتبر كل عقار يتم تسويقه لنا كأنه من ممتلكاتنا، ونكون دائماً في مكان المالك وفي مكان المستأجر."
+                : "At Bader Mohammed Al-Siwan Real Estate Marketing and Brokerage, we consider every property marketed to us as if it were our property, and we are always in the place of the owner and the tenant."}
             </p>
             <p>
               {isArabic
-                ? "في بدر محمد الصيوان للتسويق والوساطة العقارية، نحن متخصصون في التسويق والوساطة العقارية، مع تركيز خاص على تأجير العقارات في مناطق شرق وشمال الرياض. نقدم خدمات تسويقية مهنية تستهدف تأجير العقارات بشكل سريع وفعّال."
-                : "At Bader Mohammed Al-Siwan Real Estate Marketing and Brokerage, we specialize in real estate marketing and brokerage, with a special focus on leasing properties in the eastern and northern regions of Riyadh. We provide professional marketing services that target leasing properties quickly and efficiently."}
+                ? "نعمل في مجال التسويق العقاري للبيع والتأجير في شمال وشرق الرياض وكافة مناطق المملكة العربية السعودية، معتمدين على استراتيجيات مبتكرة لضمان تحقيق أعلى قيمة وجودة خدمة لكل من المالك والمستأجر."
+                : "We work in the field of real estate marketing for sale and rent in the north and east of Riyadh and all regions of the Kingdom of Saudi Arabia, relying on innovative strategies to ensure achieving the highest value and quality of service for both the owner and the tenant."}
             </p>
             {/* Insert other rewritten paragraphs here... */}
             {showBackButton && (
               <>
+                <p>{isArabic ? "شهاداتنا:" : "Our certificates:"}</p>
                 <p>
-                  {isArabic
-                    ? "نستخدم جميع المنصات العقارية لنشر العقارات المتاحة للإيجار، بما في ذلك إدراجها على قنوات اليوتيوب الخاصة بنا، بالإضافة إلى تنفيذ حملات إعلانية مبتكرة تضمن تأجير العقارات بسرعة وكفاءة، مع الالتزام بأعلى معايير الاحترافية في خدمة العملاء."
-                    : "Our goal is to help property owners market their properties in a distinctive and professional manner, to ensure excellent rental returns and achieve the highest possible value for their properties."}
-                </p>
-                <p>
-                  {isArabic
-                    ? "هدفنا هو مساعدة ملاك العقارات في تسويق عقاراتهم بشكل مميز ومهني، لضمان تحقيق عائدات إيجارية ممتازة وتحقيق أعلى قيمة ممكنة لممتلكاتهم."
-                    : "We, at Riyada Consultancy Office for Administrative and Financial Consulting and Badr Mohammed Al-Saywan Real Estate Marketing, provide integrated services in the fields of administrative and financial development, in addition to specialized real estate marketing services. We strive diligently to achieve our clients goals by offering professional consultations and innovative solutions that meet their needs and contribute to the success of their real estate projects."}
+                  <ul style={{ listStyleType: "disc" }}>
+                    <li>
+                      {isArabic
+                        ? "ماجستير في التسويق الدولي – بريطانيا (@StrathBusiness)"
+                        : "Master of International Marketing - UK (@StrathBusiness)"}
+                    </li>
+                    <li>
+                      {isArabic
+                        ? " بكالوريوس في المحاسبة والمالية مع مرتبة الشرف – معهد Dundalk للتكنولوجيا، أيرلندا (@DkIT_ie) "
+                        : "BA Hons Accounting & Finance – Dundalk Institute of Technology, Ireland (@DkIT_ie)"}
+                    </li>
+                    <li>
+                      {isArabic
+                        ? "دبلوم في إدارة الأعمال – جامعة Royal Roads، كندا (@RoyalRoads) "
+                        : "Diploma in Business Administration – Royal Roads University, Canada (@RoyalRoads)"}
+                    </li>
+                    <li>
+                      {isArabic
+                        ? "ترخيص مسوّق عقاري معتمد من هيئة العقار (رقم الترخيص: 1100012564)"
+                        : "Real Estate Broker License Approved by the Real Estate Authority (License No.: 1100012564)"}
+                    </li>
+                    <li>
+                      {isArabic
+                        ? "ترخيص منشأة (رقم الترخيص: 1200033656)"
+                        : "Facility License (License No.: 1200033656)"}
+                    </li>
+                  </ul>
                 </p>
               </>
             )}

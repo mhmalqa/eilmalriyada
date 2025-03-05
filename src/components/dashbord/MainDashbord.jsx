@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, Link, Route, useHistory } from "react-router-dom";
+import { useLocation, Link, Route } from "react-router-dom";
 import "./MainDashbord.css";
 import Img from "./pngtree.jpg";
 import { CardContact } from "./contact/CardContact";
@@ -16,7 +16,7 @@ import instance, { baseUrlWithoutApi } from "../data/BaseUrl";
 export function MainDashbord() {
   const location = useLocation(); // استخدام useLocation للحصول على المسار الحالي
   const [currentPath, setCurrentPath] = useState(location.pathname);
-  const [email, setEmail] = useState("");
+  const [, setEmail] = useState("");
   const [name, setName] = useState("");
   const [profileImagePreview, setProfileImagePreview] = useState(null);
 

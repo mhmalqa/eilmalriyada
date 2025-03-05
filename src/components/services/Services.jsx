@@ -2,9 +2,8 @@ import React from "react";
 import img from "../images/services.jpeg";
 import Back from "../common/Back";
 import CardServices from "./CardServices";
-import { services } from "../data/Data";
+import { services } from "../data/StaticData";
 import Heading from "../common/Heading";
-import Post from "../home/post/Post";
 import "./CardServices.module.css";
 
 const Services = ({ language, inHome }) => {

@@ -4,11 +4,11 @@ import Modal from "react-modal";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const RemoveImage = ({ id}) => {
+const RemoveImage = ({ id }) => {
   const [image, setImage] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [imageIdToDelete, setImageIdToDelete] = useState(null);
-  
+
   useEffect(() => {
     fetchPosts();
   }, []);
@@ -50,10 +50,7 @@ const RemoveImage = ({ id}) => {
       <div className="container grid3">
         {image.map((image) => (
           <div key={image.id} className="post">
-            <img
-              src={`${baseUrlWithoutApi}${image.url}`}
-              alt={`Image ${image.id}`}
-            />
+            <img src={`${baseUrlWithoutApi}${image.url}`} alt={image.alt} />
             <div className="div-button">
               <button
                 className="button"

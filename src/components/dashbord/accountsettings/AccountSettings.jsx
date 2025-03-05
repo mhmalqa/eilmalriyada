@@ -19,7 +19,6 @@ export function AccountSettings({ language }) {
   const [currentPassword, setCurrentPassword] = useState("");
   const [profileImage, setProfileImage] = useState(null);
   const [profileImagePreview, setProfileImagePreview] = useState(null);
-  const [message, setMessage] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {

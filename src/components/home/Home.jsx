@@ -27,10 +27,10 @@ const Home = (props) => {
       <Services language={props.language} inHome="true" />
       <Awards language={props.language} />
       <About language={props.language} inHome="true" />
-      <Contact language={props.language} inHome="true" />
-      {/* <Sectors language={props.language} /> */}
-      {/* <Location language={props.language} /> 
-      <Team language={props.language} />  */}
+      <Contact inHome="true" />
+      {/* <Sectors language={props.language} />
+       <Location language={props.language} /> 
+      <Team language={props.language} /> */}
     </>
   );
 };

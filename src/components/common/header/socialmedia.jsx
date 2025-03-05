@@ -1,34 +1,10 @@
-import { useState, useEffect } from "react";
-import instance from "../../data/BaseUrl";
+import { useSocialMedia } from "../SocialMediaContext";
 
 export function SocialMedia() {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { data, loading, error } = useSocialMedia();
 
-  async function fetchData() {
-    try {
-      const response = await instance.get("/urls");
-      setData(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      setError("Error fetching data");
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return;
-  }
-
-  if (error) {
-    return;
-  }
+  if (loading) return null;
+  if (error) return null;
 
   const socialMediaIcons = [
     { name: "whatsapp", index: 0, iconClass: "fa-whatsapp" },

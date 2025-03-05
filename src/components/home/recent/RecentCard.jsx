@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // استيراد Link
-import { list } from "../../data/Data";
 import "yet-another-react-lightbox/styles.css";
 import "../recent/Recent";
-import instance from "../../data/BaseUrl";
 import Modal from "react-modal";
 import PropertyFilter from "./PropertyFilter";
 import { toast } from "react-toastify"; // استيراد مكتبة react-toastify
+import instance, { baseUrlWithoutApi } from "../../data/BaseUrl";
+import { list } from "../../data/Data";
 
 const RecentCard = (props) => {
   const [recentIdToDelete, setRecentIdToDelete] = useState(null);
@@ -21,7 +21,6 @@ const RecentCard = (props) => {
     try {
       // إرسال طلب الحذف إلى الخادم
       await instance.delete(`/recents/remove/${recentIdToDelete}`);
-
       setModalIsOpen(false);
       window.location.reload();
       toast.success("تم حذف العقار بنجاح!"); // رسالة نجاح الحذف
@@ -141,7 +140,7 @@ const RecentCard = (props) => {
           const itemType = props.language === "english" ? type_en : type;
           const price_item = props.language === "english" ? price_en : price;
           return (
-            <div className="box shadow" key={index}>
+            <div className="box shadow" key={index} loading="lazy">
               <Link
                 to={{
                   pathname: `/real-estate/view/${item.id}`, // استخدام id الخاص بـ item ضمن الـ pathname
@@ -149,7 +148,11 @@ const RecentCard = (props) => {
                 }}
               >
                 <div className="img">
-                  <img src={cover} alt={type} title={name} loading="lazy" />
+                  <img
+                    src={`${baseUrlWithoutApi}${cover}`}
+                    alt={type}
+                    title={name}
+                  />
                 </div>
                 <div
                   className="div-eye"
@@ -236,8 +239,6 @@ const RecentCard = (props) => {
                 </div>
 
                 <div style={!props.isdash ? null : { display: "none" }}>
-                  {/* استخدام Link بدلاً من الزر */}
-                  {/* {if(!isDash)} */}
                   <Link
                     to={{
                       pathname: `/real-estate/view/${item.id}`, // استخدام id الخاص بـ item ضمن الـ pathname

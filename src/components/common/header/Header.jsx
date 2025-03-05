@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./header.css";
-import { nav } from "../../data/Data";
+import { nav } from "../../data/StaticData";
 import { Link, useLocation } from "react-router-dom";
 import { BtnChoose } from "./btn-choose";
 import { BtnLogin } from "./btn-login";
@@ -23,9 +23,9 @@ const Header = ({ language, setLanguage }) => {
   };
 
   useEffect(() => {
-    handleLoading(); // تشغيل حالة التحميل عند تغيير المسار
-    scrollToTop(); // التمرير إلى أعلى الصفحة عند تغيير المسار
-  }, [location.pathname]); // عند تغيير المسار فقط
+    handleLoading();
+    scrollToTop(); 
+  }, [location.pathname]); 
 
   return (
     <header>

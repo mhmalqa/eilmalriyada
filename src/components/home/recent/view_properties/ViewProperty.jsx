@@ -6,7 +6,6 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
 import "./viewproperty.css";
-// import "%URl_Public%/favicon.png";
 import { Helmet } from "react-helmet-async";
 
 import {
@@ -19,27 +18,43 @@ import {
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { list } from "../../../data/Data";
+import { baseUrlWithoutApi } from "../../../data/BaseUrl";
+// import { modifyMapLink } from "./modifyMapLink";
+import nonRcent from "./nonRcent.png";
 
 export function ViewProperty({ element }) {
   const [open, setOpen] = useState(false);
   const [item, setItem] = useState(null);
   const { id } = useParams();
+  const dir = document.querySelector("html").getAttribute("dir");
 
   useEffect(() => {
-    // استبدل `list` بمصدر البيانات الخاص بك
-    const foundItem = list.find((listItem) => listItem.id === parseInt(id)); // تحقق من تحويل `id` إلى رقم صحيح إذا لزم الأمر
+    const foundItem = list.find((listItem) => listItem.id === parseInt(id));
     setItem(foundItem);
-  }, [id, list]);
+  }, [id]);
 
   if (!item) {
-    return <div>Loading...</div>; // يمكنك إضافة رسالة تحميل أو تصميم تحميل هنا
+    return (
+      <div
+        style={{ textAlign: "center", marginTop: "25px", marginBottom: "25px" }}
+      >
+        <img
+          src={nonRcent}
+          alt="No Property Found"
+          style={{ width: "100%", maxWidth: "350px", height: "auto" }}
+        />
+        <p style={{ margin: "5px", fontSize: "15px", color: "#666" }}>
+          {dir === "rtl"
+            ? "لم يتم العثور على عقار بهذا الرابط."
+            : "No property found with this link."}
+        </p>
+      </div>
+    );
   }
-  // دالة لتحويل النص المحاط بالنجوم (*) إلى نص غامق
   const convertToBold = (text) => {
     return text.replace(/\*(.*?)\*/g, "<strong>$1</strong>");
   };
 
-  const dir = document.querySelector("html").getAttribute("dir");
   return (
     <>
       <Helmet>
@@ -73,12 +88,15 @@ export function ViewProperty({ element }) {
           name="twitter:description"
           content={dir === "rtl" ? item.location : item.location_en}
         />
-        <meta name="twitter:image" content={item.cover} />
+        <meta
+          name="twitter:image"
+          content={`${baseUrlWithoutApi}${item.cover}`}
+        />
       </Helmet>
       <section className="viewpropery">
         <div className="container">
           <div className="view-img">
-            <img src={item.cover} alt="" srcset="" />
+            <img src={`${baseUrlWithoutApi}${item.cover}`} alt="" srcset="" />
             <div className="div-button">
               <button
                 type="button"
@@ -96,7 +114,11 @@ export function ViewProperty({ element }) {
                 <i className="fa-solid fa-location-dot"></i>
                 {dir !== "rtl" ? "Property Location" : "موقع العقار"}
               </a>
-              <a href={item.filePdfRecent} className="hero-btn" download={item}>
+              <a
+                href={`${baseUrlWithoutApi}${item.filePdfRecent}`}
+                className="hero-btn"
+                download={item}
+              >
                 <i className="fa-solid fa-file-pdf"></i>
                 {dir !== "rtl"
                   ? "Download the property file"
@@ -355,6 +377,19 @@ export function ViewProperty({ element }) {
                 }}
               ></pre>
             </div>
+            {/* <div className="fd-item">
+              <hr />
+              <h4>{dir !== "rtl" ? "Property location" : "موقع العقار"}</h4>
+              <iframe
+                src={modifyMapLink(
+                  item.map_location,
+                  dir === "rtl" ? "ar" : "en"
+                )}
+                height="450"
+                title="خريطة الموقع"
+                loading="lazy"
+              ></iframe>
+            </div> */}
             <hr />
             <h4>
               {dir !== "rtl" ? "License Number" : "رقم الترخيص"} :{" "}

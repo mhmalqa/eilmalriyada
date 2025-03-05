@@ -10,11 +10,6 @@ const Heading = ({
   description2,
   btn_view,
 }) => {
-  // تهيئة Smooth Scroll
-  // const scroll = new SmoothScroll('a[href*="#"]', {
-  //   speed: 1000, // سرعة التمرير بالميلي ثانية
-  //   speedAsDuration: true, // استخدم السرعة كمدة للتمرير بدلاً من إعدادات التأخير
-  // });
 
   return (
     <>
@@ -28,7 +23,6 @@ const Heading = ({
         {btn_view && <SocialMedia />}
 
         {btn_view && (
-          // استخدام الرابط مع التمرير السلس
           <a
             href={profilePdf}
             className="hero-btn"

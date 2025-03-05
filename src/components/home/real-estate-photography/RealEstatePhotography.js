@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   Box,
   Typography,
@@ -22,13 +22,13 @@ import OurWorkSlider from "./OurWorkSlider";
 
 const RealEstatePhotography = () => {
   const realEstateImages = [
-    { img: img1, alt: "تصوير داخلي" },
-    { img: img2, alt: "تصوير خارجي" },
-    { img: img3, alt: "تصميم ديكور" },
-    { img: img4, alt: "تصميم حديقة" },
-    { img: img5, alt: "تصميم حديقة" },
-    { img: img6, alt: "تصميم حديقة" },
-    { img: img7, alt: "تصميم حديقة" },
+    { image_path: img1, type: "تصوير داخلي" },
+    { image_path: img2, type: "تصوير خارجي" },
+    { image_path: img3, type: "تصميم ديكور" },
+    { image_path: img4, type: "تصميم حديقة" },
+    { image_path: img5, type: "تصميم حديقة" },
+    { image_path: img6, type: "تصميم حديقة" },
+    { image_path: img7, type: "تصميم حديقة" },
   ];
 
   // كائن يحتوي على النصوص باللغتين العربية والإنجليزية
@@ -359,7 +359,7 @@ const RealEstatePhotography = () => {
             }}
             onClick={() => {
               // توجيه المستخدم إلى WhatsApp
-              window.location.href = "https://wa.me/+966508605772"; // استبدل الرقم برقمك
+              window.location.href = "https://wa.me/966508604391"; // استبدل الرقم برقمك
             }}
           >
             {translations[dir].orderNow}

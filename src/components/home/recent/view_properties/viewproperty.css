@@ -136,6 +136,23 @@ table td {
   margin-left: 5px;
   margin-right: 5px;
 }
+.fd-item iframe {
+  width: 100%;
+}
+.fd-item {
+  width: 100%;
+  padding: 10px auto;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.fd-item h4 {
+  margin-bottom: 15px;
+}
 @media screen and (max-width: 1330px) and (min-width: 1088px) {
   .viewpropery .containt a {
     padding: 10px 15px;

@@ -9,7 +9,7 @@ export function Login({ language, setIsLoggedIn }) {
   const isArabic = language === "arabic";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const secretKey = "560";
   function encrypt(text) {
     return CryptoJS.AES.encrypt(text, secretKey).toString();
@@ -30,7 +30,6 @@ export function Login({ language, setIsLoggedIn }) {
     } catch (error) {
       // console.error("Error logging in:", error);
       toast.error("خطأ بالبيانات");
-
     }
   };
 
@@ -70,10 +69,16 @@ export function Login({ language, setIsLoggedIn }) {
                   : "Follow us on social media"}
               </p>
               <div className="social-media">
-                <a href="#" className="social-icon">
-                  <i className="fab fa-facebook-f"></i>
+                <a
+                  href="https://www.instagram.com/eilmalriyada.re?igsh=b28zNmtuYzVmZnR0"
+                  className="social-icon"
+                >
+                  <i className="fab fa-instagram"></i>
                 </a>
-                <a href="#" className="social-icon">
+                <a
+                  href="https://ae.linkedin.com/posts/bader-alsiwan-728471151_%D8%A8%D8%AF%D8%B1-%D8%A7%D9%84%D8%B5%D9%8A%D9%88%D8%A7%D9%86-wwweilmalriyadacom-linkedin-activity-7229848296976994304-MloA"
+                  className="social-icon"
+                >
                   <i className="fab fa-linkedin-in"></i>
                 </a>
               </div>

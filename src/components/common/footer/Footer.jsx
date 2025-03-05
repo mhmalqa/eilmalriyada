@@ -1,5 +1,5 @@
 import React from "react";
-import { footer } from "../../data/Data";
+import { footer } from "../../data/StaticData";
 import "./footer.css";
 import { SocialMedia } from "../header/socialmedia";
 import { Link } from "react-router-dom";

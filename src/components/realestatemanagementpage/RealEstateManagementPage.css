@@ -1,0 +1,282 @@
+.real-estate-management-page {
+  font-family: "Alexandria", sans-serif;
+  height: 100vh;
+}
+
+.page-header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* لضمان عدم خروج الخلفية */
+}
+
+/* الخلفية الافتراضية */
+.page-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/image/slider-left-dec.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
+  z-index: -1; /* لإرسال الخلفية للخلف */
+}
+
+[dir="ltr"] .page-header::before {
+  background-position: right top;
+  transform: scaleX(-1);
+  left: auto;
+  right: -800px;
+}
+
+[dir="rtl"] .page-header {
+  background-position: left top;
+  left: 0px;
+  right: auto;
+}
+
+.main-banner .left-content {
+  margin-right: 15px;
+}
+.se-text {
+  line-height: 45px;
+  width: 60%;
+}
+.se-text h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #338ded;
+}
+.se-text h2 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.se-text p {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  line-height: 30px;
+  color: rgb(69, 69, 69);
+}
+
+.get-program-button {
+  font-family: "Alexandria", sans-serif;
+  padding: 12px 18px;
+  background-color: #338ded;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 13px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+
+  margin: 5px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.page-header .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.page-header .row .se-text {
+  width: 40%;
+  text-align: start;
+  align-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.page-header .row .se-image {
+  max-width: 60%;
+}
+.page-header .row .se-image img {
+  max-width: 660px;
+}
+.btn-whatsapp {
+  background-color: #edecec;
+  color: #22183e;
+}
+.get-program-button.btn-add-rcent:hover {
+  background-color: #2f59cd;
+}
+.get-program-button.btn-whatsapp:hover {
+  background-color: rgb(80, 207, 80);
+  color: #ffffff;
+}
+
+.page-main {
+  margin-top: 10px;
+  text-align: center;
+  min-height: 50vh;
+}
+
+.monitor-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 5px auto;
+}
+
+.monitor-screen {
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+.icon-item p {
+  font-size: 13px;
+  margin-top: 15px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.icon-item {
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  border-top-right-radius: 50px;
+  transition: all 0.3s;
+}
+
+.icon-item:hover {
+  transform: scale(1.05);
+  background-image: url("../../assets/image/hover.webp");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.icon-item img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.icon-item h3 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.page-main img {
+  width: auto;
+}
+
+.page-why .row {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 85%;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 800px) {
+  .real-estate-management-page {
+    display: contents;
+  }
+  .page-header {
+    display: block;
+    position: relative;
+  }
+  .page-header::before {
+    background: none;
+  }
+
+  .page-header .row .se-text {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .se-text h1 {
+    font-size: 1.6em;
+    text-align: center;
+  }
+  .se-text h2 {
+    font-size: 1em;
+    margin-bottom: 15px;
+    line-height: 25px;
+  }
+
+  .se-text p {
+    font-size: 0.8em;
+  }
+
+  .get-program-button {
+    padding: 10px 16px;
+    font-size: 0.7em;
+  }
+  .page-header .row .se-image {
+    max-width: 100%;
+  }
+
+  .monitor-container {
+    max-width: 600px;
+  }
+
+  .icon-item {
+    padding: 15px;
+  }
+
+  .page-why .row {
+    display: block;
+    width: 100%;
+    padding: 20px 51px;
+    line-height: 25px;
+  }
+  .page-why .se-text {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 15px;
+  }
+
+  .page-header h1 {
+    font-size: 1.8em;
+  }
+
+  .page-header p {
+    font-size: 0.9em;
+  }
+
+  .get-program-button {
+    padding: 10px 35px;
+  }
+
+  .monitor-container {
+    max-width: 400px;
+  }
+
+  .icon-item {
+    padding: 10px;
+  }
+}

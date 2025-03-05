@@ -72,8 +72,9 @@ const OurWorkSlider = ({ images, title }) => {
             <Box key={index} sx={{ px: 2 }}>
               <Box
                 component="img"
-                src={image.img} // استخدام خاصية img من البيانات
-                alt={image.alt} // استخدام خاصية alt من البيانات
+                src={image.image_path} // استخدام خاصية img من البيانات
+                alt={image.type} // استخدام خاصية alt من البيانات
+                // loading="lazy"
                 sx={{
                   width: "100%",
                   height: "350px",

@@ -1,5 +1,5 @@
 import React from "react";
-import { sectors } from "../../data/Data";
+import { sectors } from "../../data/StaticData";
 
 const SectorsCard = ({ language }) => {
   return (

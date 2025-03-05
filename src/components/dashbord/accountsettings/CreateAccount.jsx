@@ -19,7 +19,6 @@ export function Register({ language }) {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [profileImage, setProfileImage] = useState(null);
   const [profileImagePreview, setProfileImagePreview] = useState(null);
-  const [message, setMessage] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();

@@ -7,12 +7,10 @@ import instance from "../data/BaseUrl";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Contact = ({ inHome, language }) => {
+const Contact = ({ inHome }) => {
   const lan = document.querySelector("html").dir;
-  if (inHome !== "true" && lan === "rtl") {
-    language = "arabic";
-  }
-  const isArabic = language === "arabic";
+
+  const isArabic = lan === "rtl";
 
   const [allFieldsFilled, setAllFieldsFilled] = useState(false);
   const [data, setData] = useState({
@@ -91,14 +89,10 @@ const Contact = ({ inHome, language }) => {
         <div className="container">
           <div className="shadow container-con">
             <div className="info-p">
-              <h3>
-                {isArabic
-                  ? "طلب خدمة استشارية"
-                  : "Request Consultation Service"}
-              </h3>
+              <h3>{isArabic ? "اطلب خدماتنا" : "Request our services"}</h3>
               <p>
                 {isArabic
-                  ? " يُرجى ملء النموذج لطلب خدمة استشارية. يهمنا الحصول على جميع التفاصيل الضرورية التي تساعدنا في تحديد احتياجاتك بدقة، وسنعمل على التواصل معك في غضون 24 ساعة لتقديم الدعم اللازم."
+                  ? " يُرجى ملء النموذج لطلب خدمة. يهمنا الحصول على جميع التفاصيل الضرورية التي تساعدنا في تحديد احتياجاتك بدقة، وسنعمل على التواصل معك في غضون 24 ساعة لتقديم الدعم اللازم."
                   : "Please fill out the consultation service request form with all the necessary details and initial information that help us understand your request accurately. One of our representatives will contact you within 24 hours to assist you."}
               </p>
             </div>

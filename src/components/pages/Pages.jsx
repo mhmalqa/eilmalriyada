@@ -17,9 +17,10 @@ import { ViewProperty } from "../home/recent/view_properties/ViewProperty";
 import { Login } from "../auth/login/Login";
 import { RecentBage } from "../recentbage/RecentBage";
 import { MainDashbord } from "../dashbord/MainDashbord";
-import WebDesignService from "../home/web/WebDesignService";
+import RealEstateManagementPage from "../realestatemanagementpage/RealEstateManagementPage";
 import ResponsiveVideo from "../home/video/ResponsiveVideo";
 import RealEstatePhotography from "../home/real-estate-photography/RealEstatePhotography";
+import { SocialMediaProvider } from "../common/SocialMediaContext";
 
 // const TRACKING_ID = "G-J3X9Y258WF";
 const Pages = () => {
@@ -72,45 +73,52 @@ const PageContent = ({ language, setLanguage }) => {
 
   return (
     <>
-      <Header language={language} setLanguage={setLanguage} />
-      <Switch>
-        <Route exact path="/" render={() => <Home language={language} />} />
-        <Route path="/about" render={() => <About language={language} />} />
-        <Route
-          path="/services"
-          render={() => <Services language={language} />}
-        />
-        <Route
-          exact
-          path="/real-estate"
-          render={() => <RecentBage language={language} />}
-        />
-        <Route path="/real-estate/view/:id" component={ViewProperty} />
-        {/* <Route path="/design" component={WebDesignService} /> */}
+      <SocialMediaProvider>
+        <Header language={language} setLanguage={setLanguage} />
+        <Switch>
+          <Route exact path="/" render={() => <Home language={language} />} />
+          <Route path="/about" render={() => <About language={language} />} />
 
-        <Route path="/contact" component={Contact} />
-        <Route path="/video" component={ResponsiveVideo} />
-        <Route
-          path="/RealEstatePhotography"
-          component={RealEstatePhotography}
-        />
-
-        {!isLoggedIn && (
           <Route
-            path="/login"
-            render={() => (
-              <Login language={language} setIsLoggedIn={setIsLoggedIn} />
-            )}
+            path="/RealEstateManagement"
+            render={() => <RealEstateManagementPage />}
           />
-        )}
+          <Route
+            path="/services"
+            render={() => <Services language={language} />}
+          />
+          <Route
+            exact
+            path="/real-estate"
+            render={() => <RecentBage language={language} />}
+          />
+          <Route path="/real-estate/view/:id" component={ViewProperty} />
+          {/* <Route path="/design" component={WebDesignService} /> */}
 
-        {isLoggedIn && (
-          <Route path="/maindashbord" render={() => <MainDashbord />} />
-        )}
+          <Route path="/contact" component={Contact} />
+          <Route path="/video" component={ResponsiveVideo} />
+          <Route
+            path="/RealEstatePhotography"
+            component={RealEstatePhotography}
+          />
 
-        <Route path="/*" render={() => <Home language={language} />} />
-      </Switch>
-      <Footer language={language} /> {/* يتم عرض Footer بشكل افتراضي */}
+          {!isLoggedIn && (
+            <Route
+              path="/login"
+              render={() => (
+                <Login language={language} setIsLoggedIn={setIsLoggedIn} />
+              )}
+            />
+          )}
+
+          {isLoggedIn && (
+            <Route path="/maindashbord" render={() => <MainDashbord />} />
+          )}
+
+          <Route path="/*" render={() => <Home language={language} />} />
+        </Switch>
+        <Footer language={language} /> {/* يتم عرض Footer بشكل افتراضي */}
+      </SocialMediaProvider>
     </>
   );
 };
